@@ -7,22 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DA7225E1D7F0A2500048132 /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA7225B1D7F0A2500048132 /* Yaml.framework */; };
+		6DA7225F1D7F0A2500048132 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA7225C1D7F0A2500048132 /* SWXMLHash.framework */; };
+		6DA722601D7F0A2500048132 /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA7225D1D7F0A2500048132 /* SourceKittenFramework.framework */; };
+		6DA722631D7F0F6A00048132 /* Yaml.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DA7225B1D7F0A2500048132 /* Yaml.framework */; };
+		6DA722641D7F0F6A00048132 /* SWXMLHash.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DA7225C1D7F0A2500048132 /* SWXMLHash.framework */; };
+		6DA722651D7F0F6A00048132 /* SourceKittenFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DA7225D1D7F0A2500048132 /* SourceKittenFramework.framework */; };
 		6DADA2661D7F066E00CCF353 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADA2651D7F066E00CCF353 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6DADA2601D7F066E00CCF353 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				6DA722631D7F0F6A00048132 /* Yaml.framework in CopyFiles */,
+				6DA722641D7F0F6A00048132 /* SWXMLHash.framework in CopyFiles */,
+				6DA722651D7F0F6A00048132 /* SourceKittenFramework.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6DA7225B1D7F0A2500048132 /* Yaml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yaml.framework; path = Carthage/Build/Mac/Yaml.framework; sourceTree = "<group>"; };
+		6DA7225C1D7F0A2500048132 /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Carthage/Build/Mac/SWXMLHash.framework; sourceTree = "<group>"; };
+		6DA7225D1D7F0A2500048132 /* SourceKittenFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceKittenFramework.framework; path = Carthage/Build/Mac/SourceKittenFramework.framework; sourceTree = "<group>"; };
 		6DADA2621D7F066E00CCF353 /* UNClassDiagram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UNClassDiagram; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DADA2651D7F066E00CCF353 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,16 +44,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DA722601D7F0A2500048132 /* SourceKittenFramework.framework in Frameworks */,
+				6DA7225E1D7F0A2500048132 /* Yaml.framework in Frameworks */,
+				6DA7225F1D7F0A2500048132 /* SWXMLHash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6DA722611D7F0A3600048132 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DA7225B1D7F0A2500048132 /* Yaml.framework */,
+				6DA7225C1D7F0A2500048132 /* SWXMLHash.framework */,
+				6DA7225D1D7F0A2500048132 /* SourceKittenFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6DADA2591D7F066E00CCF353 = {
 			isa = PBXGroup;
 			children = (
 				6DADA2641D7F066E00CCF353 /* UNClassDiagram */,
+				6DA722611D7F0A3600048132 /* Frameworks */,
 				6DADA2631D7F066E00CCF353 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -211,6 +237,10 @@
 		6DADA26A1D7F066E00CCF353 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -218,6 +248,10 @@
 		6DADA26B1D7F066E00CCF353 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -241,6 +275,7 @@
 				6DADA26B1D7F066E00CCF353 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
