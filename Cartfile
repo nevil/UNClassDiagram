@@ -1,2 +1,3 @@
-github "jpsim/SourceKitten" == 0.13.0
+#github "jpsim/SourceKitten" == 0.14.1
+github "jpsim/SourceKitten" "e6997b2f653f337af2ae1f60301baef06318437e"
 

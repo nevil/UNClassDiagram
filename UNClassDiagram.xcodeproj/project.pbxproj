@@ -120,6 +120,7 @@
 				TargetAttributes = {
 					6DADA2611D7F066E00CCF353 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -242,6 +243,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -253,6 +255,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
